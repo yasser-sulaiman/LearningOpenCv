@@ -52,7 +52,8 @@ void main() {
         bitwise_and(backGround, mask, newBackGround);
 
         // replace the detected area with the area from the back ground
-        bitwise_or(frame, newBackGround, newFrame);
+        newFrame = frame + newBackGround;
+        //bitwise_or(frame, newBackGround, newFrame);
 
         //imshow("frame", frame);
         imshow("newFrame", newFrame);
